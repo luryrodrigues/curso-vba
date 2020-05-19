@@ -1,0 +1,42 @@
+Private Sub btn_fechar_Click()
+
+    Form_cadastro.Hide
+
+    Unload Form_cadastro
+
+End Sub
+
+Private Sub btn_limpar_Click()
+
+    txt_nome = ""
+    txt_cidade = ""
+    txt_fruta = ""
+    txt_cor = ""
+
+End Sub
+
+Private Sub btn_cadastrar_Click()
+
+    If txt_cidade.Value = "Lorena" Or txt_cidade.Value = "Itajubá" Or txt_cidade.Value = "SJC" Then
+        Sheets("CADASTRADOS").Select
+        Range("B3").Select
+        Selection.End(xlDown).Select
+        ActiveCell.Offset(1, 0).Select
+        
+        ActiveCell.Value = txt_nome
+        ActiveCell.Offset(0, 1).Value = txt_cidade
+        ActiveCell.Offset(0, 2).Value = txt_fruta
+        ActiveCell.Offset(0, 3).Value = txt_cor
+        
+        Form_cadastro.Hide
+        
+        txt_nome = ""
+        txt_cidade = ""
+        txt_fruta = ""
+        txt_cor = ""
+    Else
+        MsgBox "Cidade incorreta!"
+    
+    End If
+        
+End Sub
