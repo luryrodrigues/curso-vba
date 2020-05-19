@@ -24,6 +24,7 @@ Private Sub btn_cadastrar_Click()
     If txt_novousuario = "" Or txt_novasenha = "" Then
         MsgBox "Preencha os campos requeridos"
     Else
+        Worksheets("PERMISSÕES").visible = True
         Sheets("PERMISSÕES").Select
         Range("C3").Select
         Selection.End(xlDown).Select
@@ -31,13 +32,21 @@ Private Sub btn_cadastrar_Click()
         ActiveCell.Value = txt_novousuario
         ActiveCell.Offset(0, 1).Value = txt_novasenha
         Unload formcadastro
+        Unload formlogin2
+        Unload formestoque
         Sheets("EXERCÍCIOS").Select
+        MsgBox "Usuário cadastrado com sucesso!"
     End If
-           
+        Worksheets("PERMISSÕES").visible = False
 End Sub
 
 Private Sub btn_canc_Click()
 
     Unload formcadastro
+    Unload formlogin2
+
+End Sub
+
+Private Sub UserForm_Click()
 
 End Sub

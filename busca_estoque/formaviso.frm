@@ -21,9 +21,6 @@ End Sub
 
 Private Sub btn_sim_Click()
 
-    ActiveCell.Offset(0, 2).Value = formestoque.txt_qtd
+    formlogin.Show
     
-    formaviso.Hide
-    Unload formestoque
-
 End Sub
