@@ -1,31 +1,28 @@
-' Formulário Login e Senha
+' Formulário de login e senha
 
 Private Sub btn_cancelar_Click()
 
-Form_Login.Hide
+    Form_Login.Hide
 
-Unload Form_Login
+    Unload Form_Login
 
 End Sub
 
 Private Sub btn_entrar_Click()
 
-Dim login As String
-Dim senha As String
+    Dim login As String
+    Dim senha As String
 
-login = txt_login.Value
-senha = txt_senha.Value
+    login = txt_login.Value
+    senha = txt_senha.Value
 
     If login = "admin" And senha = "123" Then
-    Form_Login.Hide
-    Unload Form_Login
-    Form_cadastro.Show
-
+        Form_Login.Hide
+        Unload Form_Login
+        Form_cadastro.Show
     Else
-
-    MsgBox ("Usuário/senha incorreto(s)!")
-    Unload Form_Login
-
+        MsgBox ("Usuário/senha incorreto(s)!")
+        Unload Form_Login
     End If
 
 End Sub
