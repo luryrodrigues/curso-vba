@@ -77,7 +77,3 @@ Private Sub btn_usuario_Click()
     formlogin2.Show
     
 End Sub
-
-Private Sub UserForm_Click()
-
-End Sub
