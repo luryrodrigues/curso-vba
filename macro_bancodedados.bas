@@ -1,12 +1,14 @@
+Attribute VB_Name = "MÛdulo1"
 Sub adc_bancodados()
+Attribute adc_bancodados.VB_ProcData.VB_Invoke_Func = " \n14"
 '
 ' adc_bancodados Macro
 '
 
 '
-Application.ScreenUpdating = False
+    Application.ScreenUpdating = False
 
-    Sheets("EXERC√çCIOS").Select
+    Sheets("EXERCÕCIOS").Select
     Range("B11:E11").Select
     Selection.Copy
     Sheets("CADASTRADOS").Select
@@ -15,14 +17,14 @@ Application.ScreenUpdating = False
     ' Range("B18").Select
     ActiveCell.Offset(1, 0).Select
     ActiveSheet.Paste
-    Sheets("EXERC√çCIOS").Select
+    Sheets("EXERCÕCIOS").Select
     
-Application.ScreenUpdating = True
+    Application.ScreenUpdating = True
 
 End Sub
-________________________________________________________________________
 
 Sub ordem_alfabetica()
+Attribute ordem_alfabetica.VB_ProcData.VB_Invoke_Func = " \n14"
 '
 ' ordem_alfabetica Macro
 '
@@ -50,16 +52,15 @@ Sub ordem_alfabetica()
         .SortMethod = xlPinYin
         .Apply
     End With
-    Sheets("EXERC√çCIOS").Select
+    Sheets("EXERCÕCIOS").Select
     
     Application.ScreenUpdating = True
     
 End Sub
-_________________________________________________________________________________________
-
-Sub remover_duplic()
+Sub duplic()
+Attribute duplic.VB_ProcData.VB_Invoke_Func = " \n14"
 '
-' remover_duplic Macro
+' duplic Macro
 '
 
 '
@@ -74,9 +75,8 @@ Sub remover_duplic()
     ' ActiveSheet.Range("B2:E19").RemoveDuplicates Columns:=Array(1, 2, 3, 4), _
         Header:=xlYes
     BancoDados.RemoveDuplicates Columns:=Array(1, 2, 3, 4), Header:=xlYes
-    Sheets("EXERC√çCIOS").Select
+    Sheets("EXERCÕCIOS").Select
     
     Application.ScreenUpdating = True
     
 End Sub
-
